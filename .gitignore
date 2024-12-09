@@ -7,18 +7,43 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules
 node_modules
+
+# Build output
 dist
 dist-ssr
-*.local
+build
+
+# System Files
+.DS_Store
+*.swp
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Lock files (only if you’re not committing them)
+# yarn.lock
+# pnpm-lock.yaml
+
+# Coverage
+coverage/
+
+# Vercel / Netlify
+.vercel/
+.netlify/
+
+# Other temporary files
+*.tmp
+*.bak
