@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { authenticateUser } from "../redux/firebaseActions";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
+  const navigate = useNavigate();
+
   const handleLogin = () => {
     dispatch(authenticateUser(credentials));
+  };
+
+  const register = () => {
+    navigate("/register");
   };
 
   return (
@@ -30,6 +37,7 @@ const Login = () => {
         }
       />
       <button onClick={handleLogin}>Login</button>
+      <button onClick={register}>Register</button>
     </div>
   );
 };
