@@ -36,7 +36,7 @@ export const authenticateUser = (credentials) => async (dispatch) => {
       credentials.password
     );
     const user = userCredential.user;
-    console.log(user.invoices);
+    console.log("user", user);
 
     // Dispatch only essential data
     dispatch(
